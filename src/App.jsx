@@ -59,18 +59,17 @@ function App() {
     })
   }
 
-
+  
 
   return (
     <>
       <button className="bg-green-500 text-white p-3 font-semibold rounded-md m-10" onClick={getProducts}>Get me products</button>
       <button className="bg-sky-500 text-white p-3 font-semibold rounded-md m-10" onClick={addProducts}>Add new product</button>
       <br /><br />
-      {products.map((data,index)=>(
+      {products.length > 0 ? (products.map((data,index)=>(
         <div key={index} className="p-10 bg-zinc-300 rounded-md w-fit ml-10 px-4 py-2 mt-4">
         {data.title}
-      </div>
-      ))}
+      </div>))) : (<h1 className="p-10">Loading...</h1>)}
     </>
   )
 }
