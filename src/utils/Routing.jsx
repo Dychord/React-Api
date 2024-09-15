@@ -3,6 +3,7 @@ import { Route, Routes, Link, NavLink } from 'react-router-dom'
 import Show from '../components/Show'
 import Add from '../components/Add'
 import Home from '../components/Home'
+import Services from '../components/Services'
 
 function Routing() {
 
@@ -19,12 +20,14 @@ function Routing() {
           <NavLink className={styleLink} to="/">Home</NavLink>
           <NavLink className={styleLink} to="/show">Show</NavLink>
           <NavLink className={styleLink} to="/add">Add</NavLink>
+          <NavLink className={styleLink} to="/services">Services</NavLink>
         </nav>
         <hr />
         <Routes>
             <Route path='/' element={<Home />}></Route>
             <Route path='/show' element={<Show />}></Route>
             <Route path='/add' element={<Add />} ></Route>
+            <Route path='/services' element={<Services />} ></Route>
         </Routes>
     </>
   )
