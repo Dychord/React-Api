@@ -1,18 +1,15 @@
 import React, { useEffect, useState } from 'react'
-import axios from 'axios'
-
+import axios from '../utils/Axios'
 
 function Services() {
-
+    
     const [users, setUsers] = useState([])
     useEffect(()=>{
         getUsers()
     },[])
 
-    const api = "https://fakestoreapi.com/users"
-
     const getUsers = ()=>{
-        axios.get(api).then((item)=>setUsers(item.data)).catch((err)=>console.log(err))
+        axios.get("/users").then((item)=>setUsers(item.data)).catch((err)=>console.log(err))
     }
 
   return (
