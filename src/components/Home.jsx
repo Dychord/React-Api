@@ -1,13 +1,16 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 function Home() {
+  useEffect(()=>{
+    console.log("Comp is created");
+    return ()=>{
+      console.log("Comp is deleted");
+    }
+  })
 
+  
   return (
-    <>
-        <div>
-            <h1>Homepage</h1>
-        </div>
-    </>    
+    <div>Home</div>
   )
 }
 
