@@ -4,11 +4,11 @@ function Home() {
 
 
   useEffect(()=>{
-    console.log("Comp is created");
+    console.log("Home Comp is created");
     return ()=>{
-      console.log("Comp is deleted");
+      console.log("Home Comp is deleted");
     }
-  })
+  },[])
 
   const [first, setFirst] = useState("First")
   const [second, setSecond] = useState("Second")
